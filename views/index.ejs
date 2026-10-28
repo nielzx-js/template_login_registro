@@ -1,0 +1,148 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0b080b;
+            color: #f4edf3;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #160f15;
+            border: 1px solid #2c1e2a;
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #b7a8b5;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #51404f;
+            border-radius: 7px;
+            background: #211720;
+            color: #f4edf3;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #a875a0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #a875a0;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 22px;
+            color: #b7a8b5;
+            font-size: 14px;
+        }
+
+        .register a {
+            color: #a875a0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="card">
+
+            <h1>Entrar</h1>
+            <p class="subtitle">Acesse sua conta</p>
+
+            <form>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seu@email.com"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="••••••••"
+                    >
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p class="register">
+                Ainda não possui uma conta?
+                <a href="/register">Criar conta</a>
+            </p>
+
+        </div>
+    </main>
+
+</body>
+</html>
+```
