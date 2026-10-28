@@ -13,12 +13,22 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+
+
+
 
 app.get('/',(req,res)=>{
     res.render('index')
 })
 
 app.post('/login', async (req,res)=>{
+  
+
+
     const {email,senha} = req.body
     const query=`
     SELECT * FROM usuario
@@ -28,6 +38,7 @@ app.post('/login', async (req,res)=>{
     `
     const result = await pool.query(query,[email,senha])
     if(result.rowCount>0){
+    
         res.send(`
             <script>
             alert("login feito com sucesso!")
@@ -38,7 +49,7 @@ app.post('/login', async (req,res)=>{
     else{
         res.send(`
             <script>
-                alert("usuário não encontrado.")
+                alert("usuário pu senha incorreto")
                 window.location.href='/'
                 </script>
             `)
